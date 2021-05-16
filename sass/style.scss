@@ -5,6 +5,8 @@ $noto: 'Noto Serif', serif;
 $roboto: 'Roboto Slab', serif;
 $color-one:#fff;
 $color-two:#fed136;
+$color-three:#222222;
+$color-four: #777777;
 
 /*Global*/
 
@@ -129,4 +131,69 @@ $color-two:#fed136;
 
 .wrapper button:hover {
     transform: scale(1.05, 1.05);
+}
+
+/* Section Services */
+
+.services .col-12:first-of-type {
+    text-align: center;
+    margin: 120px 0 80px 0;
+}
+
+.services .col-12:first-of-type h3 {
+    font-family: $montserrat;
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 60px;
+    font-weight: 700;
+    color: $color-three;
+}
+
+.services .col-12:first-of-type span {
+    color: $color-four;
+    font-family: $noto;
+    font-size: 16px;
+}
+
+.services .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 28px;
+}
+
+.services button {
+    color: $color-two;
+    border: 3px solid $color-two;
+    border-radius: 50px;
+    background-color: $color-one;
+    font-size: 38px;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.services button:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.service h4 {
+    color: $color-three;
+    font-family: $montserrat;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.service p {
+    color: $color-four;
+    font-family: $roboto;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.35px;
+    margin-bottom: 120px;
 }
