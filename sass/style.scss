@@ -3,13 +3,11 @@
 $montserrat: 'Montserrat', sans-serif;
 $noto: 'Noto Serif', serif;
 $roboto: 'Roboto Slab', serif;
+$transition: .3s;
 $color-one:#fff;
 $color-two:#fed136;
 $color-three:#222222;
 $color-four: #777777;
-$color-five: #f7f7f7;
-$color-six: #333333;
-$color-seven: #737373;
 
 /*Global*/
 
@@ -57,7 +55,7 @@ section {
     opacity: 0.5;
 }
 
-.row {
+.welcome .row {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -88,18 +86,19 @@ section {
     text-decoration: none;
     font-size: 14px;
     text-align: center;
-    transition: .3s;
+    transition: $transition;
 }
 
 .navigation ul li a:hover {
     color: #ccc;
 }
 
-.wrapper {
+.welcome .wrapper {
     display: flex;
     flex-direction: column;
     z-index: 1;
     text-align: center;
+    margin-top: 215px;
 }
 
 .wrapper h2 {
@@ -107,7 +106,7 @@ section {
     font-size: 40px;
     color: $color-one;
     font-weight: 300;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 .wrapper h1 {
@@ -116,7 +115,8 @@ section {
     font-weight: 700;
     color: $color-one;
     text-transform: uppercase;
-    margin-bottom: 45px;
+    margin-bottom: 60px;
+    letter-spacing: 2.5px;
 }
 
 .wrapper button {
@@ -132,7 +132,7 @@ section {
     border-radius: 5%;
     margin: 0 auto;
     cursor: pointer;
-    transition: .3s;
+    transition: $transition;
 }
 
 .wrapper button:hover {
@@ -178,11 +178,11 @@ section {
     margin: 0 auto;
     margin-bottom: 28px;
     cursor: pointer;
-    transition: .3s;
+    transition: $transition;
 }
 
 .services button:hover {
-    transform: scale(1.05, 1.05);
+    transform: scale(1.15, 1.15);
 }
 
 .service h4 {
@@ -204,7 +204,7 @@ section {
 /* Section Portfolio */
 
 .portfolio {
-    background: $color-five;
+    background: #f7f7f7;
     padding-bottom: 60px;
 }
 
@@ -252,6 +252,8 @@ section {
     left: 39px;
     width: 291px;
     height: 93px;
+    display: flex;
+    flex-direction: column;
     background: $color-one;
     display: flex;
     justify-content: center;
@@ -259,14 +261,59 @@ section {
 }
 
 .portfolio .wrapper h4 {
-    color: $color-six;
+    color: #333333;
     font-family: $montserrat;
     font-size: 18px;
     letter-spacing: -0.45px;
 }
 
 .portfolio .wrapper span {
-    color: $color-seven;
+    color: #737373;
     font-family: $noto;
     font-size: 14px;
+}
+
+/* Footer */
+
+footer .row {
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer .row span {
+    margin-left: 30px;
+    color: #555555;
+    font-family: $roboto;
+    font-size: 14px;
+    letter-spacing: -0.35px;
+}
+
+footer ul {
+    list-style-type: none;
+    margin-left: 65px;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 5px;
+    transition: $transition;
+}
+
+footer ul li:hover {
+    transform: scale(1.10, 1.10);
+}
+
+footer .img {
+    position: relative;
+    width: 41px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%;
+}
+
+footer .img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
